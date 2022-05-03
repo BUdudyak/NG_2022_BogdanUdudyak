@@ -4,15 +4,14 @@ using namespace std;
 
 int main()
 {
-    int userNumber, lNumber = 0, number;
+    int userNumber, number;
     cout << "Enter your number: ";
     cin >> userNumber;
     for(int n = userNumber; n > 0; n /= 10)
     {
-        lNumber = n%10;
-        if(lNumber % 2 == 0)
+        if((n%10) % 2 == 0)
         {
-            number += lNumber;
+            number += n%10;
         }
     }
     cout << "Sum of even numbers are - "<< number;
