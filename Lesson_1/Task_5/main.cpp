@@ -9,8 +9,6 @@ int main()
     int b = 0;
     int c = 0;
     double D = 0;
-    double x1 = 0;
-    double x2 = 0;
     cout << "Enter numbers for ax^2+bx-c=0" << endl;
     cout << "Let's solve for this formula  ->  D=b^2-4ac"<< endl;
     cout << "a: ";
@@ -26,15 +24,12 @@ int main()
     }
     else if(D > 0)
     {
-        x1 = ((-b + sqrt(D))/2*a);
-        x2 = ((-b - sqrt(D))/2*a);
-        cout << "x1 = " << x1 << endl;
-        cout << "x2 = " << x2;
+        cout << "x1 = " << ((-b + sqrt(D))/2*a) << endl;
+        cout << "x2 = " << ((-b - sqrt(D))/2*a);
     }
     else if(D == 0)
     {
-        x1 = ((-b +sqrt(D))/2*a);
-        cout << "x = " << x1;
+        cout << "x = " << ((-b +sqrt(D))/2*a);
     }
     return 0;
 }
