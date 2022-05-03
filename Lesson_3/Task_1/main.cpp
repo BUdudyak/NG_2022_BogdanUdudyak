@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int number = 0, userNumber = 0, checkNumber = 0;
+    int number = 0, userNumber = 0;
     cout << "Enter size of array: ";
     cin >> number;
     int array[number];
@@ -15,18 +15,19 @@ int main()
         array[i] = userNumber;
     }
     cout << "Number that you want to check: ";
-    cin >> checkNumber;
+    cin >> userNumber;
     for(int i = 0; i < number; i++)
     {
-        if(array[i] == checkNumber)
+        if(array[i] == userNumber)
         {
-            userNumber = -1;
+
             cout << "I know that number" << endl;
+            break;
         }
-    }
-    if(userNumber != -1)
-    {
-        cout << "I don't know that number" << endl;
+        if(i+1 == number)
+        {
+            cout << "I don't know that number" << endl;
+        }
     }
 
     return 0;
