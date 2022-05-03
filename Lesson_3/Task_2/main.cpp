@@ -14,7 +14,7 @@ int main()
         array1[i] = rand()%9;
         array2[i] = rand()%9;
     }
-    for(int i = 4; i > 0; i--)
+    for(int i = 3; i >= 0; i--)
     {
         helper += 1;
         if(array1[i] != 0)
