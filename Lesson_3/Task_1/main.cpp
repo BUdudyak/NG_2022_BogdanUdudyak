@@ -11,8 +11,7 @@ int main()
     for(int i = 0; i < number; i++)
     {
         cout << "Enter " << i + 1 << " array's element: ";
-        cin >> userNumber;
-        array[i] = userNumber;
+        cin >> array[i];
     }
     cout << "Number that you want to check: ";
     cin >> userNumber;
@@ -20,7 +19,6 @@ int main()
     {
         if(array[i] == userNumber)
         {
-
             cout << "I know that number" << endl;
             break;
         }
@@ -29,6 +27,5 @@ int main()
             cout << "I don't know that number" << endl;
         }
     }
-
     return 0;
 }
