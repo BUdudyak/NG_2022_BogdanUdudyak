@@ -8,18 +8,10 @@ int wordsCounter(char* text)
 {
     for(int i = 0;text[i] != 0; i++)
     {
-        if(text[i-1] >= 'a' && text[i-1] <= 'z' && text[i] >= 'A' && text[i] <= 'Z')
-        {
-            counter++;
-            continue;
-        }
-        if(counter == 0 && (text[i] >= 'a' && text[i] <= 'z' || text[i+1] >= 'A' && text[i+1] <= 'Z')||
-           text[i] >= 'A' && text[i] <= 'Z' && text[i+1] >= 'a' && text[i+1] <= 'z')
-        {
-            counter++;
-            continue;
-        }
-        if(text[i-1] == ' ' && (text[i] >= 'a' && text[i] <= 'z' || text[i] >= 'A' && text[i] <= 'Z'))
+        if((text[i-1] >= 'a' && text[i-1] <= 'z' && text[i] >= 'A' && text[i] <= 'Z') ||
+           (counter == 0 && (text[i] >= 'a' && text[i] <= 'z' || text[i+1] >= 'A' && text[i+1] <= 'Z')||
+            text[i] >= 'A' && text[i] <= 'Z' && text[i+1] >= 'a' && text[i+1] <= 'z') ||
+           (text[i-1] == ' ' && (text[i] >= 'a' && text[i] <= 'z' || text[i] >= 'A' && text[i] <= 'Z')))
         {
             counter++;
         }
