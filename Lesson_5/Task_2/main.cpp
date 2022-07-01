@@ -2,15 +2,13 @@
 
 using namespace std;
 
-int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
-void finder(int number, int counter)
+void finder(int number, int counter, int* array)
 {
     if(counter < 10)
     {
         if(number != array[counter])
         {
-            return finder(number, counter + 1);
+            return finder(number, counter + 1, array);
         }
         if(number == array[counter])
         {
@@ -23,10 +21,9 @@ void finder(int number, int counter)
 
 int main()
 {
-    int counter = 0;
-    int number;
+    int counter = 0, number, array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     cout << "Enter the number what u want to find: " << endl;
     cin >> number;
-    finder(number, counter);
+    finder(number, counter, array);
     return 0;
 }
